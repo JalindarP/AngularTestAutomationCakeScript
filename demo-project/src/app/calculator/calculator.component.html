@@ -1,0 +1,19 @@
+<div>
+  <label>Number 1</label>
+  <input id="Num1" type="text" style="height: 30px;  width:300px;">
+  <div style="height: 10px;"></div>
+  <label>Number 2</label>
+  <input id="Num2" type="text" style="height: 30px; width:300px;">
+</div>
+
+<div style="height: 10px;"></div>
+
+<div>
+  <input type="button" (click)="add()" id="bAdd" value="Add">
+  <input type="button" (click)="sub()" id="bSub" value="Substract">
+  <input type="button" (click)="mul()" id="bMul" value="Multiply">
+  <input type="button" (click)="div()" id="bDiv" value="Division">
+  <div style="height: 10px;"></div>
+  <label id="lResult" [hidden]="labelText==undefined" [innerText]="labelText"></label>
+</div>
+

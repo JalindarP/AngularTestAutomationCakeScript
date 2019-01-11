@@ -1,0 +1,15 @@
+<div>
+  <label>FirstName</label>
+  <input id="fName" type="text" style="height: 30px;  width:300px;">
+  <div style="height: 10px;"></div>
+  <label>LastName</label>
+  <input id="lName" type="text" style="height: 30px; width:300px;">
+</div>
+
+<div style="height: 10px;"></div>
+
+<div>
+  <input type="button" (click)="clickMe()" id="bSubmit" value="Submit">
+  <div style="height: 10px;"></div>
+  <label id="lResult" [hidden]="labelText==undefined" [innerText]="labelText"></label>
+</div>
