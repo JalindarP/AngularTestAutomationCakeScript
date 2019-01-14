@@ -11,11 +11,12 @@ When clicked Add
 Then Output should be <result>
 Examples: 
 | firstNumber | secondNumber | result |
-|             |              | 0      |
+|     0       |      0       | 0      |
 |             |       0      | 0      |
-|         0   |              | 0      |
+|             |              | 0      |
 |       100   |              | 100    |
 |             |       50     | 50     |
+|       0     |              | 0      |
 
 @Negative-Input
 Scenario Outline: Add Negative numbers

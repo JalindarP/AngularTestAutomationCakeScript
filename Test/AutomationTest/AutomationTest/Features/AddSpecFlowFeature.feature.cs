@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationTest
+namespace AutomationTest.Features
 {
     using TechTalk.SpecFlow;
     
@@ -25,7 +25,7 @@ namespace AutomationTest
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "Add.SpecFlowFeature.feature"
+#line 1 "AddSpecFlowFeature.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -61,7 +61,7 @@ namespace AutomationTest
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Add two numbers")))
             {
-                global::AutomationTest.AddTwoNumbersFeature.FeatureSetup(null);
+                global::AutomationTest.Features.AddTwoNumbersFeature.FeatureSetup(null);
             }
         }
         
@@ -116,13 +116,13 @@ testRunner.Then(string.Format("Output should be {0}", result), ((string)(null)),
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add two numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Empty-Input")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:secondNumber", "")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:secondNumber", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "0")]
         public virtual void AddEmptyNumbers_Variant0()
         {
 #line 7
-this.AddEmptyNumbers("", "", "0", ((string[])(null)));
+this.AddEmptyNumbers("0", "0", "0", ((string[])(null)));
 #line hidden
         }
         
@@ -146,13 +146,13 @@ this.AddEmptyNumbers("", "0", "0", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add two numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Empty-Input")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:secondNumber", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "0")]
         public virtual void AddEmptyNumbers_Variant2()
         {
 #line 7
-this.AddEmptyNumbers("0", "", "0", ((string[])(null)));
+this.AddEmptyNumbers("", "", "0", ((string[])(null)));
 #line hidden
         }
         
@@ -186,6 +186,21 @@ this.AddEmptyNumbers("", "50", "50", ((string[])(null)));
 #line hidden
         }
         
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add empty numbers: Variant 5")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add two numbers")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Empty-Input")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 5")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:secondNumber", "")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "0")]
+        public virtual void AddEmptyNumbers_Variant5()
+        {
+#line 7
+this.AddEmptyNumbers("0", "", "0", ((string[])(null)));
+#line hidden
+        }
+        
         public virtual void AddNegativeNumbers(string firstNumber, string secondNumber, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -195,16 +210,16 @@ this.AddEmptyNumbers("", "50", "50", ((string[])(null)));
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Negative numbers", null, @__tags);
-#line 21
+#line 22
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 22
-testRunner.Given(string.Format("first number {0}", firstNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
-testRunner.And(string.Format("second number {0}", secondNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given(string.Format("first number {0}", firstNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
-testRunner.When("clicked Add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And(string.Format("second number {0}", secondNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
+testRunner.When("clicked Add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
 testRunner.Then(string.Format("Output should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -220,7 +235,7 @@ testRunner.Then(string.Format("Output should be {0}", result), ((string)(null)),
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "-110")]
         public virtual void AddNegativeNumbers_Variant0()
         {
-#line 21
+#line 22
 this.AddNegativeNumbers("-100", "-10", "-110", ((string[])(null)));
 #line hidden
         }
@@ -235,7 +250,7 @@ this.AddNegativeNumbers("-100", "-10", "-110", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "90")]
         public virtual void AddNegativeNumbers_Variant1()
         {
-#line 21
+#line 22
 this.AddNegativeNumbers("100", "-10", "90", ((string[])(null)));
 #line hidden
         }
@@ -250,7 +265,7 @@ this.AddNegativeNumbers("100", "-10", "90", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "-90")]
         public virtual void AddNegativeNumbers_Variant2()
         {
-#line 21
+#line 22
 this.AddNegativeNumbers("-100", "10", "-90", ((string[])(null)));
 #line hidden
         }
@@ -265,7 +280,7 @@ this.AddNegativeNumbers("-100", "10", "-90", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "-100")]
         public virtual void AddNegativeNumbers_Variant3()
         {
-#line 21
+#line 22
 this.AddNegativeNumbers("100", "-200", "-100", ((string[])(null)));
 #line hidden
         }
