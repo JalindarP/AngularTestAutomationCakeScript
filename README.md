@@ -11,7 +11,7 @@ Create Angular Application
 Update App.module.ts for new Component
 Browse http://localhost:4200/calculator/
 
-# Test Prject
+# Test Prject .Net Framework
 Selenium  Using .Net Framework, VS2017
  New .Net Framework Unit Test Project, Add Nuget packages- 
   MSTest.TestAdapter
@@ -25,6 +25,13 @@ Selenium  Using .Net Framework, VS2017
   SpecFlow.Tools.MsBuild.Generation
 
 Add Feature file, Write Scenario > Right Click > Generate Step Defination > Update step files and Run
+
+# Test Prject .Net core
+Same as above only nuget need to beta version 
+  SpecFlow 3.0.155-beta
+  SpecFlow.MsTest 3.0.155-beta
+  SpecFlow.Tools.MsBuild.Generation 3.0.155-beta
+   And remove feature file reference from .csproj 
 
 # Generate trx file using vstest
 # Note- MSTest V2 not work with MSTest command  
@@ -45,3 +52,4 @@ Add Feature file, Write Scenario > Right Click > Generate Step Defination > Upda
   Run cmd to pickles.exe path 
   
   C:\Tools\pickles.2.20.1\tools>pickles.exe --feature-directory="C:\Project\TestAutomation\Test\AutomationTest\AutomationTest\Features" --output-directory="C:\Project\TestAutomation\Test\AutomationTest\Docs\DHtml" --system-under-test-name=C:\Project\TestAutomation\Test\AutomationTest\AutomationTest\AutomationTest.csproj --system-under-test-version=1.0 --link-results-file="C:\Project\TestAutomation\Test\AutomationTest\TestResults\OWQ8_IN01LAP81064_2019-01-14_18_41_02.trx" --test-results-format=vstest --documentation-format=dhtml
+
