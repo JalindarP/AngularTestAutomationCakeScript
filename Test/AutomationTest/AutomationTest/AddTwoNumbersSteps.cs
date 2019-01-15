@@ -13,46 +13,48 @@ namespace AutomationTest
     {
 
         IWebDriver _driver;
-        NgWebDriver _ngDriver;
+        //NgWebDriver _ngDriver;
 
         public AddTwoNumbersSteps()
         {
             _driver = new ChromeDriver(Directory.GetCurrentDirectory());
-            _ngDriver = new NgWebDriver(_driver);
-            _ngDriver.Url = "http://localhost:4200/calculator/";
-            _ngDriver.Manage().Window.Maximize();
-            _ngDriver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
+            _driver.Url = "C:\\Project\\TestAutomation\\SeleniumHTML\\Index.html";
+            //_ngDriver = new NgWebDriver(_driver);
+            //_ngDriver.Url = "http://localhost:4200/calculator/";
+
+            //_ngDriver.Manage().Window.Maximize();
+            //_ngDriver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
         }
 
 
         [Given(@"first number (.*)")]
         public void GivenFirstNumber(string p0)
         {
-            _ngDriver.FindElement(By.Id("Num1")).SendKeys(p0);
+            _driver.FindElement(By.Id("Num1")).SendKeys(p0);
         }
 
         [Given(@"second number (.*)")]
         public void GivenSecondNumber(string p0)
         {
-            _ngDriver.FindElement(By.Id("Num2")).SendKeys(p0);
+            _driver.FindElement(By.Id("Num2")).SendKeys(p0);
         }
 
         [When(@"clicked Add")]
         public void WhenClickedAdd()
         {
-            _ngDriver.FindElement(By.Id("bAdd")).Click();
+            _driver.FindElement(By.Id("bAdd")).Click();
         }
 
         [Then(@"Output should be (.*)")]
         public void ThenOutputShouldBe(string p0)
         {
-            _ngDriver.FindElement(By.Id("lResult")).Text.ShouldBe(p0);
+            _driver.FindElement(By.Id("lResult")).Text.ShouldBe(p0);
         }
 
 
         public void Dispose()
         {
-            _ngDriver.Dispose();
+            //_ngDriver.Dispose();
             _driver.Dispose();
         }
     }
